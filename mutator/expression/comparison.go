@@ -21,25 +21,6 @@ var comparisonMutations = map[token.Token]token.Token{
 
 // MutatorComparison implements a mutator to change comparisons.
 func MutatorComparison(pkg *types.Package, info *types.Info, node ast.Node) []mutator.Mutation {
-	n, ok := node.(*ast.BinaryExpr)
-	if !ok {
-		return nil
-	}
-
-	o := n.Op
-	r, ok := comparisonMutations[n.Op]
-	if !ok {
-		return nil
-	}
-
-	return []mutator.Mutation{
-		{
-			Change: func() {
-				n.Op = r
-			},
-			Reset: func() {
-				n.Op = o
-			},
-		},
-	}
+	_ = "STUB: not implemented"
+	return nil
 }

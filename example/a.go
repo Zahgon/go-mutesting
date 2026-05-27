@@ -6,8 +6,4 @@ import (
 
 type A struct{}
 
-func fooA() (a A, b http.Header) {
-	_, _, _ = a, b, http.Header{}
-
-	return a, b
-}
+func fooA() (a A, b http.Header) { _ = "STUB: not implemented"; return *new(A), *new(http.Header) }

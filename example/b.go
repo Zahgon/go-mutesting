@@ -4,8 +4,4 @@ import (
 	"net/http"
 )
 
-func fooB() (a A, b http.Header) {
-	a, b = A{}, http.Header{}
-
-	return a, b
-}
+func fooB() (a A, b http.Header) { _ = "STUB: not implemented"; return *new(A), *new(http.Header) }
